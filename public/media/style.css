@@ -41,6 +41,48 @@ p.sponsor {
   width: 80px;
 }
 
+/** Cover Image List */
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+  gap: 1em;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .image-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-box input {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.image-box input {
+  border-radius: 3px;
+  border: 1px solid #d1d5da;
+  padding: 0.4em;
+  width: 100%;
+}
+
+.image-box .description {
+  width: 100%;
+}
+
+.image-box h2 {
+  border-bottom: none !important;
+  margin-top: 0 !important;
+}
+
 
 
 /* https://github.com/sindresorhus/github-markdown-css */

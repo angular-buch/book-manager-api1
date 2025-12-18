@@ -148,11 +148,19 @@ $app->add(function (Request $request, $handler) {
             ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
 });
 
-
+/** STATIC PAGES */
 $app->get('/', function (Request $request, Response $response, $args) {
 	$indexPage = file_get_contents('indexpage.html');
 	$response->getBody()->write($indexPage);
 	return $response->withStatus(200);
+});
+
+$app->get('/covers', function (Request $request, Response $response, $args) {
+  ob_start();
+  include 'dummycoverspage.php';
+  $coversPage = ob_get_clean();
+  $response->getBody()->write($coversPage);
+  return $response->withStatus(200);
 });
 
 
