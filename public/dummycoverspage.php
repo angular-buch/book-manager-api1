@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <title>BookManager API v1</title>
     <meta charset="UTF-8" />
@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="media/style.css" media="screen" />
   </head>
   <body class="markdown-body">
-    <h1>Example Cover Images</h1>
+    <h1>Beispiel-Coverbilder</h1>
 
-    <p>We provide 30 dummy cover images to be used as cover image URLs in the book form.</p>
+    <p>Wir stellen 30 Beispiel-Coverbilder bereit, die du als Bild-URLs im Buchformular verwenden kannst.</p>
 
     <div class="image-container">
       <?php for ($i = 1; $i <= 30; $i++): ?>

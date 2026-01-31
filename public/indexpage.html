@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <title>BookManager API v1</title>
     <meta charset="UTF-8" />
@@ -14,35 +14,33 @@
     </ul>
     <hr />
     <p>
-      <strong>You can reset the book list to its initial state.</strong
-      ><br />Execute this function if there are no more records or when the
-      contents are insufficient.
+      <strong>Du kannst die Buchliste zurücksetzen.</strong
+      ><br />Das ist z. B. sinnvoll, wenn keine Einträge mehr vorhanden sind.
     </p>
-    <button onclick="resetBookList()" id="reset">Reset book list</button>
+    <button onclick="resetBookList()" id="reset">Buchliste zurücksetzen</button>
     <span id="resetOK">OK</span>
     <hr />
     <p>
-      We provide <strong>hosted example cover images</strong> that can be used as Cover Image URLs in the book creation form.</strong>
+      Wir stellen <strong>gehostete Beispiel-Coverbilder</strong> bereit, die du als Bild-URLs im Buchformular verwenden kannst.
     </p>
     <p>
-      <strong><a href="/covers">&rarr; List of example cover images</a></strong>
+      <strong><a href="/covers">&rarr; Liste der Beispiel-Coverbilder</a></strong>
     </p>
     <hr />
-    <strong>Explorable API documentation:&nbsp;<a href="/swagger-ui/">/swagger-ui/</a></strong>
+    <strong>Interaktive API-Dokumentation:&nbsp;<a href="/swagger-ui/">/swagger-ui/</a></strong>
     <br />
-    <small>OpenAPI Specification:&nbsp;<a href="/openapi.json">/openapi.json</a></small>
+    <small>OpenAPI-Spezifikation:&nbsp;<a href="/openapi.json">/openapi.json</a></small>
     <hr />
-    &copy;&nbsp;<a href="https://angular-buch.com">Angular-Buch Team</a>
+    &copy;&nbsp;<a href="https://angular-buch.com">Angular-Buch-Team</a>
     <script>
       function resetBookList() {
         const resetOK = document.querySelector('#resetOK');
-        if (!confirm('Do you want to reset the book list?')) {
+        if (!confirm('Buchliste zurücksetzen?')) {
           return;
         }
 
         fetch('/books', { method: 'DELETE' }).then(() => {
           resetOK.style.visibility = 'visible';
-
           setTimeout(() => (resetOK.style.visibility = 'hidden'), 1000);
         });
       }
