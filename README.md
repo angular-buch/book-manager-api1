@@ -1,16 +1,17 @@
 # BookManager API v1
 
-This is the API for the BookManager application from the [German Angular Book](https://angular-buch.com). It is a RESTful API that provides CRUD operations for books.
-A publicly available server is hosted at [api1.angular-buch.com](https://api1.angular-buch.com).
+Dieses Projekt enthält eine HTTP-API für die BookManager-Anwendung aus dem [Angular-Buch](https://angular-buch.com).
+Die Schnittstelle bietet CRUD-Operationen für Buchdatensätze an.
+Ein öffentlich verfügbarer Server wird unter [api1.angular-buch.com](https://api1.angular-buch.com) gehostet.
 
 ## Installation
 
-> :warning: **You don't need to install this project to use the API. Please use the public server at [api1.angular-buch.com](https://api1.angular-buch.com).**
+> :warning: **Du musst dieses Projekt nicht installieren, um die API zu nutzen. Bitte verwende den öffentlichen Server unter [api1.angular-buch.com](https://api1.angular-buch.com).**
 
-The `public` folder must contain an `.env` file with MySQL credentials.
-Copy the `.env.example` to `.env`.
+Der Ordner `public` muss eine `.env`-Datei mit MySQL-Zugangsdaten enthalten.
+Kopiere die Datei `.env.example` nach `.env`.
 
-Dependencies are managed with composer. Run in the project root to install all deps:
+Abhängigkeiten werden mit Composer verwaltet. Führe im Projektverzeichnis den folgenden Befehl aus, um alle Abhängigkeiten zu installieren:
 
 ```bash
 composer install
@@ -18,6 +19,6 @@ composer install
 
 ## Swagger UI
 
-The `swagger-ui` package is installed as a dependency via `composer`.
-The served directory `public/swagger-ui` is a symlink to the `swagger-ui` package in the `vendor` folder.
-To be able to configure Swagger UI, an Apache rewrite rule replaces the predefined config with our own version (`public/swagger-initializer.js`).
+Das Paket `swagger-ui` wird als Abhängigkeit über `composer` installiert.
+Das bereitgestellte Verzeichnis `public/swagger-ui` ist ein Symlink auf das Paket `swagger-ui` im Ordner `vendor`.
+Um Swagger UI konfigurieren zu können, ersetzt eine Apache-Rewrite-Regel die vordefinierte Konfiguration durch unsere eigene Version (`public/swagger-initializer.js`).
